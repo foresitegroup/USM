@@ -1,0 +1,292 @@
+/*
+font-family: 'Noto Serif', serif;
+  400: normal
+  700: bold
+font-family: 'Open Sans', sans-serif;
+  300: light
+  400: normal
+  600: semi-bold
+  700: bold
+  800: extra-bold
+
+#071D44 - blue
+#EDA50B - orange
+#F2F9EF - light green
+*/
+
+BODY {
+  margin: 0;
+  padding: 0;
+  background: #FFFFFF;
+  color: #363636;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.4em;
+}
+
+IMG {
+  border: 0;
+}
+
+HR {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #363636;
+  margin: 1em 0;
+  padding: 0;
+}
+
+A:link, A:visited {
+  color: #0000FF;
+  text-decoration: none;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+A:hover, A:active {
+  color: #FF0000;
+  text-decoration: none;
+}
+
+H1 {
+  font-size: 170%;
+  margin: 0 0 0.5em;
+}
+
+H2 {
+  font-size: 150%;
+  margin: 0 0 0.5em;
+}
+
+.site-width {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.site-width-small {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.site-width:after,
+.site-width-small:after,
+.cf:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.sticky-spacer {
+  height: 93px;
+}
+
+.sticky-header {
+  background: #071D44;
+  color: #FFFFFF;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky-header .site-width {
+  padding: 1.2em 2%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+A.logo {
+  display: inline-block;
+  color: #EDA50B;
+  font-weight: 400;
+  font-family: 'Noto Serif', serif;
+  font-size: 35px;
+  line-height: 1em;
+}
+
+A.logo DIV {
+  padding-top: 0.3em;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  line-height: 1em;
+  text-align: center;
+}
+
+.menu {
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+}
+
+.menu UL {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.menu UL LI {
+  display: inline-block;
+  padding-left: 3em;
+  position: relative;
+  z-index: 99;
+}
+
+.menu UL LI:first-of-type {
+  padding-left: 0;
+}
+
+.menu UL LI A:link, .menu UL LI A:visited,
+.menu UL LI UL LI A:link, .menu UL LI UL LI A:visited {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.menu UL LI:hover A,
+.menu UL LI UL LI A:hover {
+  color: #EDA50B;
+  text-decoration: none;
+}
+
+.menu UL LI.button A:link,
+.menu UL LI.button A:visited {
+  border: 4px solid #FFFFFF;
+  border-radius: 10px;
+  padding: 0.25em 0.75em;
+}
+
+.menu UL LI.button A:hover,
+.menu UL LI.button A:active {
+  border-color: #EDA50B;
+}
+
+.menu UL LI UL {
+  display: none;
+  padding-bottom: 0.1em;
+}
+
+.menu UL LI:hover UL {
+  display: block;
+  position: absolute;
+  top: 1.4em;
+  left: 0;
+}
+
+.menu UL LI UL LI {
+  display: block;
+  padding: 0.2em 0;
+  font-size: 0.8em;
+  height: 1em;
+  line-height: 1em;
+}
+
+.menu UL LI UL LI A {
+  display: block;
+}
+
+.usm-footer {
+  background: #F2F9EF;
+  color: #3C3E3D;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1em;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+.usm-logo {
+  transform: translateY(-50%);
+  margin-bottom: 15px;
+}
+
+.usm-footer .site-width-small {
+  padding: 6em 0;
+  text-align: left;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1em;
+  position: relative;
+}
+
+.usm-footer UL {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.usm-footer UL LI {
+  display: inline-block;
+  padding-left: 3.5em;
+}
+
+.usm-footer UL LI:first-of-type {
+  padding-left: 0;
+}
+
+.usm-footer UL LI A:link,
+.usm-footer UL LI A:visited,
+.usm-footer .social A:link,
+.usm-footer .social A:visited {
+  color: #003264;
+}
+
+.usm-footer UL LI A:hover,
+.usm-footer UL LI A:active,
+.usm-footer .social A:hover,
+.usm-footer .social A:active {
+  color: #EDA50B;
+}
+
+.usm-footer .social {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 25px;
+  line-height: 1em;
+}
+
+.usm-footer .social A {
+  margin-left: 0.5em;
+}
+
+.usm-footer .social A:first-of-type {
+  margin-left: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+  .site-width {
+    width: 96%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .site-width-small {
+    width: 96%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  /* Small computer or landscape tablet */
+}
+
+@media only screen and (max-width: 768px) {
+  /* Tablet */
+}
+
+@media only screen and (max-width: 600px) {
+  /* Small tablet */
+}
+
+@media only screen and (max-width: 480px) {
+  /* Phone */
+}
