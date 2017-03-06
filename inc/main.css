@@ -83,12 +83,29 @@ H2 {
   height: 93px;
 }
 
+.home .sticky-spacer {
+  height: 0;
+}
+
 .sticky-header {
   background: #071D44;
   color: #FFFFFF;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 10;
+}
+
+.home .sticky-header {
+  background: transparent;
+  position: absolute;
+  top: 2em;
+}
+
+.home .sticky-header.sticky {
+  background: #071D44;
+  position: fixed;
+  top: 0;
 }
 
 .sticky-header .site-width {
@@ -190,6 +207,131 @@ A.logo DIV {
   display: block;
 }
 
+.video-banner {
+  position: relative;
+  width: 100%;
+  padding-top: 52.08%;
+  overflow: hidden;
+}
+
+.video-banner:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 23, 47, .8);
+}
+
+.video-banner VIDEO {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  background-position: center center;
+  background-size: cover;
+}
+
+.video-banner .home-menu {
+  position: absolute;
+  top: 1.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  text-align: right;
+  padding: 0 2.5%;
+  box-sizing: border-box;
+  color: #EDA50B;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1em;
+  letter-spacing: 0.08em;
+}
+
+.video-banner .home-menu A:link,
+.video-banner .home-menu A:visited {
+  color: #EDA50B;
+}
+
+.video-banner .home-menu A:hover,
+.video-banner .home-menu A:active {
+  color: #FFFFFF;
+}
+
+.video-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-60%);
+  z-index: 5;
+  width: 62%;
+  text-align: center;
+  font-weight: 800;
+  font-size: 66px;
+  line-height: 1.4em;
+  color: #FFFFFF;
+}
+
+.video-triangle {
+  position: absolute;
+  bottom: 0;
+  z-index: 5;
+  width: 100%;
+  height: auto;
+}
+
+.video-badge {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+}
+
+
+
+
+.outer-therm {
+  margin-top: 22px;
+}
+
+.inner-therm {
+  position: relative;
+  overflow: visible !important;
+}
+
+.inner-therm:after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid #00CCCC;
+}
+
+.inner-therm span {
+  padding: 0 !important;
+  position: absolute;
+  right: -1.1em;
+  top: -22px;
+  z-index: 7;
+  color: #00CCCC;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 1em;
+}
+
+
+
+
 .usm-footer {
   background: #F2F9EF;
   color: #3C3E3D;
@@ -272,6 +414,11 @@ A.logo DIV {
 @media only screen and (max-width: 1024px) {
   .site-width-small {
     width: 96%;
+  }
+
+  .video-badge {
+    max-height: 16%;
+    width: auto;
   }
 }
 
