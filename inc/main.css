@@ -294,11 +294,28 @@ A.logo DIV {
   z-index: 6;
 }
 
+.home-progress {
+  padding: 3em 0;
+  text-align: center;
+  color: #003366;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1em;
+}
 
+#total-raised {
+  padding: 0.5em 0 0.65em;
+  color: #00172F;
+  font-weight: 700;
+  font-family: 'Noto Serif', serif;
+  font-size: 125px;
+  line-height: 1em;
+}
 
-
-.outer-therm {
-  margin-top: 22px;
+#total-raised-bar {
+  background: #D7D7D7;
+  min-height: 12px;
+  margin: 22px 0 4.5em;
 }
 
 .inner-therm {
@@ -317,6 +334,10 @@ A.logo DIV {
   border-left: 6px solid #00CCCC;
 }
 
+.hundred:after {
+  display: none;
+}
+
 .inner-therm span {
   padding: 0 !important;
   position: absolute;
@@ -329,8 +350,108 @@ A.logo DIV {
   line-height: 1em;
 }
 
+.home-progress .site-width {
+  padding: 4em 0;
+  display: flex;
+}
 
+.home-progress .one-third {
+  display: inline-block;
+  vertical-align: top;
+  width: 22.41%;
+  margin: 0 5.3%;
+  color: #707070;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5em;
+  padding-bottom: 6em;
+  position: relative;
+}
 
+.home-progress .one-third .circle {
+  position: relative;
+}
+
+.home-progress .one-third .circle .preload {
+  padding-top: 100%;
+  position: relative;
+}
+
+.home-progress .one-third .circle .preload:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 15px solid #D7D7D7;
+  border-radius: 50%;
+}
+
+.home-progress .one-third .circle .circle-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  font-weight: 700;
+  font-family: 'Noto Serif', serif;
+  font-size: 22px;
+  line-height: 1em;
+  color: #00172F;
+}
+
+#capital-percent,
+#endowment-percent,
+#usm-percent {
+  margin-top: 0.25em;
+  font-weight: 800;
+  font-family: 'Open Sans', serif;
+  font-size: 55px;
+  line-height: 1em;
+}
+
+#capital-percent, #capital-raised { color: #A1B434; }
+#endowment-percent, #endowment-raised { color: #EDA50B; }
+#usm-percent, #usm-raised { color: #003366; }
+
+#capital-raised,
+#endowment-raised,
+#usm-raised {
+  margin-top: 1.5em;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1em;
+}
+
+.home-progress .goal {
+  margin: 1em 0;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 1em;
+}
+
+.home-progress .one-third A:link,
+.home-progress .one-third A:visited {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 1em;
+  letter-spacing: 0.1em;
+  color: #003366;
+  border: 4px solid #003366;
+  border-radius: 1.5em;
+  padding: 0.6em 0.9em 0.5em 1em;
+}
+
+.home-progress .one-third A:hover,
+.home-progress .one-third A:active {
+  color: #EDA50B;
+  border-color: #EDA50B;
+}
 
 .usm-footer {
   background: #F2F9EF;
