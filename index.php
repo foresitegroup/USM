@@ -149,7 +149,7 @@ function nice_number($num) {
 
       this.destroy();
     },{offset: '75%'});
-    
+
     $(".home-progress .site-width").waypoint(function() {
       $(".home-progress .one-third .circle .preload").removeClass("preload");
 
@@ -193,43 +193,111 @@ function nice_number($num) {
   var usmRaised = new CountUp("usm-raised", 0, <?php echo $USMRaised; ?>, 0, 2, opt1);
 </script>
 
+<link rel="stylesheet" href="inc/swipebox/swipebox.css">
+<script type="text/javascript" src="inc/swipebox/jquery.swipebox.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".swipebox-video").swipebox({autoplayVideos: true});
+  });
+</script>
+
+<div id="home-campaign">
+  <div class="site-width">
+    <div class="campaign-text">
+      <h2>Our Common Bond Campaign</h2>
+
+      For generations, University School of Milwaukee has served as a pillar of academic excellence, built on the heritage of our predecessor schools that include Milwaukee Country Day School, Milwaukee Downer Seminary, and Milwaukee University School.<br>
+      <br>
+
+      It is with confidence and pride that we now launch Our Common Bond: The Campaign for University School of Milwaukee, seeking funding that will enhance critical areas of School life and provide us with the ability to "think big" across our curriculum.<br>
+      <br>
+
+      <a href="#" class="more">LEARN MORE</a>
+    </div>
+
+    <div class="campaign-images">
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="image1 swipebox-video" rel="home-campaign"><img src="images/home-campaign1.jpg" alt=""><div class="play"></div></a>
+      <img src="images/home-campaign2.jpg" alt="" class="image2">
+      <img src="images/home-campaign3.jpg" alt="" class="image3">
+    </div>
+  </div>
+</div>
+
 <div class="site-width">
-  <h1>Content (H1)</h1>
+  <link rel="stylesheet" href="inc/slick/slick.css">
+  <script type="text/javascript" src="inc/slick/slick.min.js"></script>
+  <script type="text/javascript" src="inc/slick/slick.init.home-slider.js"></script>
+  <script type="text/javascript" src="inc/slick/slick.init.home-slider-inner.js"></script>
 
-  Bacon ipsum dolor sit amet sausage bacon biltong, salami drumstick hamburger ham hock. Filet mignon ribeye meatball flank tri-tip tongue boudin, doner pig tenderloin. Beef cow turducken pork belly. Corned beef andouille short loin spare ribs. Short ribs frankfurter pig beef ribs. Sausage salami kielbasa cow jowl. Pork ribeye sirloin sausage bacon ham swine turkey biltong tenderloin boudin beef ribs pig hamburger.<br>
-  <br>
+  <div class="home-slider">
+    <div class="cf">
+      <div class="home-slider-text">
+        <h2>Capital</h2>
+        Our capital projects will yield significant academic returns and long-lasting value to the School, while extending the spirit of community so central to our mission. It is critical that our facilities continue to set USM apart.<br>
+        <br>
 
-  Pig shankle andouille venison ham frankfurter strip steak ham hock, swine jerky ball tip flank hamburger. Leberkas cow short loin capicola ham hock bresaola. Pig beef ribs salami shankle, ham hock shank flank kielbasa sausage hamburger tenderloin. Salami shankle prosciutto sausage pork chop tri-tip. Short loin shankle tail capicola bresaola chuck drumstick pork belly t-bone shoulder hamburger salami corned beef leberkas meatloaf. Corned beef t-bone drumstick jowl shoulder brisket sirloin meatball turkey.<br>
-  <br>
+        <a href="#" class="more">LEARN MORE</a>
+      </div>
+      
+      <div class="home-slider-inner">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="swipebox-video" rel="cap1"><img src="images/home-slider-cap1.jpg" alt=""><div class="play"></div></a>
 
-  Bacon sirloin jowl tail pork loin corned beef sausage ribeye rump. Pork chop spare ribs turkey andouille strip steak. Venison pig bresaola ground round. Leberkas frankfurter pastrami prosciutto bresaola jowl.<br>
-  <br>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="swipebox-video" rel="cap2"><img src="images/home-slider-cap2.jpg" alt=""><div class="play"></div></a>
 
-  Bacon ipsum dolor sit amet sausage bacon biltong, salami drumstick hamburger ham hock. Filet mignon ribeye meatball flank tri-tip tongue boudin, doner pig tenderloin. Beef cow turducken pork belly. Corned beef andouille short loin spare ribs. Short ribs frankfurter pig beef ribs. Sausage salami kielbasa cow jowl. Pork ribeye sirloin sausage bacon ham swine turkey biltong tenderloin boudin beef ribs pig hamburger.<br>
-  <br>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="swipebox-video" rel="cap3"><img src="images/home-slider-cap3.jpg" alt=""><div class="play"></div></a>
 
-  Pig shankle andouille venison ham frankfurter strip steak ham hock, swine jerky ball tip flank hamburger. Leberkas cow short loin capicola ham hock bresaola. Pig beef ribs salami shankle, ham hock shank flank kielbasa sausage hamburger tenderloin. Salami shankle prosciutto sausage pork chop tri-tip. Short loin shankle tail capicola bresaola chuck drumstick pork belly t-bone shoulder hamburger salami corned beef leberkas meatloaf. Corned beef t-bone drumstick jowl shoulder brisket sirloin meatball turkey.<br>
-  <br>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="swipebox-video" rel="cap4"><img src="images/home-slider-cap4.jpg" alt=""><div class="play"></div></a>
+      </div>
+    </div>
 
-  Bacon sirloin jowl tail pork loin corned beef sausage ribeye rump. Pork chop spare ribs turkey andouille strip steak. Venison pig bresaola ground round. Leberkas frankfurter pastrami prosciutto bresaola jowl.<br>
-  <br>
+    <div>
+      <div class="home-slider-text">
+        <h2>Endowment</h2>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac ultrices ligula, quis bibendum arcu. Maecenas fringilla felis in tempor fermentum. Sed eleifend elit et nunc consectetur dictum. Vivamus ullamcorper nisi leo.<br>
+        <br>
 
-  Bacon ipsum dolor sit amet sausage bacon biltong, salami drumstick hamburger ham hock. Filet mignon ribeye meatball flank tri-tip tongue boudin, doner pig tenderloin. Beef cow turducken pork belly. Corned beef andouille short loin spare ribs. Short ribs frankfurter pig beef ribs. Sausage salami kielbasa cow jowl. Pork ribeye sirloin sausage bacon ham swine turkey biltong tenderloin boudin beef ribs pig hamburger.<br>
-  <br>
+        <a href="#" class="more">LEARN MORE</a>
+      </div>
+      
+      <div class="home-slider-inner">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="swipebox-video" rel="end1"><img src="images/home-slider-end1.jpg" alt=""><div class="play"></div></a>
 
-  Pig shankle andouille venison ham frankfurter strip steak ham hock, swine jerky ball tip flank hamburger. Leberkas cow short loin capicola ham hock bresaola. Pig beef ribs salami shankle, ham hock shank flank kielbasa sausage hamburger tenderloin. Salami shankle prosciutto sausage pork chop tri-tip. Short loin shankle tail capicola bresaola chuck drumstick pork belly t-bone shoulder hamburger salami corned beef leberkas meatloaf. Corned beef t-bone drumstick jowl shoulder brisket sirloin meatball turkey.<br>
-  <br>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="swipebox-video" rel="end2"><img src="images/home-slider-end2.jpg" alt=""><div class="play"></div></a>
 
-  Bacon sirloin jowl tail pork loin corned beef sausage ribeye rump. Pork chop spare ribs turkey andouille strip steak. Venison pig bresaola ground round. Leberkas frankfurter pastrami prosciutto bresaola jowl.<br>
-  <br>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="swipebox-video" rel="end3"><img src="images/home-slider-end3.jpg" alt=""><div class="play"></div></a>
 
-  Bacon ipsum dolor sit amet sausage bacon biltong, salami drumstick hamburger ham hock. Filet mignon ribeye meatball flank tri-tip tongue boudin, doner pig tenderloin. Beef cow turducken pork belly. Corned beef andouille short loin spare ribs. Short ribs frankfurter pig beef ribs. Sausage salami kielbasa cow jowl. Pork ribeye sirloin sausage bacon ham swine turkey biltong tenderloin boudin beef ribs pig hamburger.<br>
-  <br>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="swipebox-video" rel="end4"><img src="images/home-slider-end4.jpg" alt=""><div class="play"></div></a>
+      </div>
+    </div>
 
-  Pig shankle andouille venison ham frankfurter strip steak ham hock, swine jerky ball tip flank hamburger. Leberkas cow short loin capicola ham hock bresaola. Pig beef ribs salami shankle, ham hock shank flank kielbasa sausage hamburger tenderloin. Salami shankle prosciutto sausage pork chop tri-tip. Short loin shankle tail capicola bresaola chuck drumstick pork belly t-bone shoulder hamburger salami corned beef leberkas meatloaf. Corned beef t-bone drumstick jowl shoulder brisket sirloin meatball turkey.<br>
-  <br>
+    <div>
+      <div class="home-slider-text">
+        <h2>USM Fund</h2>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur nunc in dignissim viverra. Suspendisse iaculis nisl vitae tempus suscipit. Mauris feugiat viverra vestibulum. Phasellus interdum elit tortor.<br>
+        <br>
 
-  Bacon sirloin jowl tail pork loin corned beef sausage ribeye rump. Pork chop spare ribs turkey andouille strip steak. Venison pig bresaola ground round. Leberkas frankfurter pastrami prosciutto bresaola jowl.
+        <a href="#" class="more">LEARN MORE</a>
+      </div>
+      
+      <div class="home-slider-inner">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="swipebox-video" rel="usm1"><img src="images/home-slider-usm1.jpg" alt=""><div class="play"></div></a>
+
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="swipebox-video" rel="usm2"><img src="images/home-slider-usm2.jpg" alt=""><div class="play"></div></a>
+
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="swipebox-video" rel="usm3"><img src="images/home-slider-usm3.jpg" alt=""><div class="play"></div></a>
+
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="swipebox-video" rel="usm4"><img src="images/home-slider-usm4.jpg" alt=""><div class="play"></div></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="home-stories">
+  STORIES
+</div>
+
+<div id="timeline" class="site-width">
+  CAMPAIGN TIMELINE
 </div>
 
 <?php include "footer.php"; ?>
