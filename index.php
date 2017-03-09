@@ -73,13 +73,14 @@ function nice_number($num) {
           <div id="capital-percent"><?php echo $CapitalPercent . "%"; ?></div>
         </div>
       </div>
+      
+      <div class="one-third-text">
+        <div id="capital-raised"><noscript>$<?php echo number_format($CapitalRaised); ?></noscript></div>
+        <div class="goal">Goal: $<?php echo nice_number($CapitalGoal); ?></div>
+        The Commons, Performing Arts Center, Innovation Center &amp; Community room.<br>
 
-      <div id="capital-raised"><noscript>$<?php echo number_format($CapitalRaised); ?></noscript></div>
-      <div class="goal">Goal: $<?php echo nice_number($CapitalGoal); ?></div>
-      The Commons, Performing Arts Center, Innovation Center &amp; Community room.<br>
-      <br>
-
-      <a href="#">LEARN MORE</a>
+        <a href="#">LEARN MORE</a>
+      </div>
     </div>
 
     <div class="one-third">
@@ -91,12 +92,14 @@ function nice_number($num) {
           <div id="endowment-percent"><noscript><?php echo $EndowmentPercent . "%"; ?></noscript></div>
         </div>
       </div>
+      
+      <div class="one-third-text">
+        <div id="endowment-raised"><noscript>$<?php echo number_format($EndowmentRaised); ?></noscript></div>
+        <div class="goal">Goal: $<?php echo nice_number($EndowmentGoal); ?></div>
+        Faculty Compensation and Innovative Teaching, Experimental Learning and Global Education, Scholarships and Financial Aid.<br>
 
-      <div id="endowment-raised"><noscript>$<?php echo number_format($EndowmentRaised); ?></noscript></div>
-      <div class="goal">Goal: $<?php echo nice_number($EndowmentGoal); ?></div>
-      Faculty Compensation and Innovative Teaching, Experimental Learning and Global Education, Scholarships and Financial Aid.
-
-      <a href="#">LEARN MORE</a>
+        <a href="#">LEARN MORE</a>
+      </div>
     </div>
 
     <div class="one-third">
@@ -108,13 +111,14 @@ function nice_number($num) {
           <div id="usm-percent"><?php echo $USMPercent . "%"; ?></div>
         </div>
       </div>
+      
+      <div class="one-third-text">
+        <div id="usm-raised"><noscript>$<?php echo number_format($USMRaised); ?></noscript></div>
+        <div class="goal">Goal: $<?php echo nice_number($USMGoal); ?> (Over 5 Years)</div>
+        Annual Giving Program for Continued Excellence.<br>
 
-      <div id="usm-raised"><noscript>$<?php echo number_format($USMRaised); ?></noscript></div>
-      <div class="goal">Goal: $<?php echo nice_number($USMGoal); ?> (Over 5 Years)</div>
-      Annual Giving Program for Continued Excellence.<br>
-      <br>
-
-      <a href="#">LEARN MORE</a>
+        <a href="#">LEARN MORE</a>
+      </div>
     </div>
   </div>
 </div>
@@ -154,17 +158,17 @@ function nice_number($num) {
       $(".home-progress .one-third .circle .preload").removeClass("preload");
 
       $('#capital-circle').circleProgress({
-        value: 0.<?php echo $CapitalPercent; ?>, fill: '#A1B434', size: $('.home-progress .one-third').width(),
+        value: 0.<?php echo $CapitalPercent; ?>, fill: '#A1B434', size: $('.home-progress .one-third .circle').width(),
         emptyFill: '#D7D7D7', startAngle: 0, thickness: 15, animation: { duration: 2000 }
       });
 
       $('#endowment-circle').circleProgress({
-        value: 0.<?php echo $EndowmentPercent; ?>, fill: '#EDA50B', size: $('.home-progress .one-third').width(),
+        value: 0.<?php echo $EndowmentPercent; ?>, fill: '#EDA50B', size: $('.home-progress .one-third .circle').width(),
         emptyFill: '#D7D7D7', startAngle: 0, thickness: 15, animation: { duration: 2000 }
       });
 
       $('#usm-circle').circleProgress({
-        value: 0.<?php echo $USMPercent; ?>, fill: '#003366', size: $('.home-progress .one-third').width(),
+        value: 0.<?php echo $USMPercent; ?>, fill: '#003366', size: $('.home-progress .one-third .circle').width(),
         emptyFill: '#D7D7D7', startAngle: 0, thickness: 15, animation: { duration: 2000 }
       });
 
@@ -258,7 +262,7 @@ function nice_number($num) {
 
         <a href="#" class="more">LEARN MORE</a>
       </div>
-      
+
       <div class="home-slider-inner">
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="swipebox-video" rel="end1"><img src="images/home-slider-end1.jpg" alt=""><div class="play"></div></a>
 
@@ -278,7 +282,7 @@ function nice_number($num) {
 
         <a href="#" class="more">LEARN MORE</a>
       </div>
-      
+
       <div class="home-slider-inner">
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="swipebox-video" rel="usm1"><img src="images/home-slider-usm1.jpg" alt=""><div class="play"></div></a>
 
@@ -293,11 +297,66 @@ function nice_number($num) {
 </div>
 
 <div id="home-stories">
-  STORIES
+  <div class="home-stories-image"></div>
+
+  <div class="site-width">
+    <div class="home-stories-text">
+      <h5>STORIES</h5>
+
+      <h2>&ldquo;USM Graduates are the people you want on your team.&rdquo;</h2>
+
+      <div class="attr">
+        <strong>Bruce Lee '81</strong><br>
+        Member of USM's Alumni Association Board,<br>
+        Managing Director - Wealth Management, Financial Advisor Merrill Lynch
+      </div>
+
+      <a href="#">READ STORY</a>
+      EXPLORE MORE <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+    </div>
+  </div>
 </div>
 
 <div id="timeline" class="site-width">
-  CAMPAIGN TIMELINE
+  <h2>Campaign Timeline</h2>
+
+  <?php
+  $result = $mysqli->query("SELECT * FROM timeline ORDER BY year ASC");
+  ?>
+  <style>
+    <?php
+    while($row = $result->fetch_array(MYSQLI_ASSOC)) {
+      echo "#tab" . $row['year'] . ":checked ~ #content" . $row['year'] . " { display: block; }\n";
+    }
+    ?>
+  </style>
+  
+  <?php
+  $result->data_seek(0);
+
+  $check = 1;
+  while($row = $result->fetch_array(MYSQLI_ASSOC)) {
+    echo "<input id=\"tab" . $row['year'] . "\" type=\"radio\" name=\"tabs\"";
+    if ($check == 1 || $row['year'] == date("Y")) echo " checked";
+    echo ">\n";
+
+    echo "<label for=\"tab" . $row['year'] . "\">" . $row['year'] . "</label>\n";
+
+    $check++;
+  }
+
+  $result->data_seek(0);
+
+  while($row = $result->fetch_array(MYSQLI_ASSOC)) {
+    ?>
+    <div id="content<?php echo $row['year']; ?>">
+      <div class="site-width-small">
+        <?php echo $row['content']; ?>
+      </div>
+    </div>
+    <?php
+  }
+  ?>
 </div>
 
 <?php include "footer.php"; ?>

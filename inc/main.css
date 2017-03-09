@@ -198,6 +198,10 @@ A.logo DIV {
   text-align: center;
 }
 
+A.my-menu-toggle {
+  display: none;
+}
+
 .menu {
   position: absolute;
   top: 50%;
@@ -566,11 +570,17 @@ A.logo DIV {
   position: relative;
 }
 
+.campaign-images IMG {
+  max-width: 100%;
+  height: auto;
+}
+
 .campaign-images .image1 {
   position: absolute;
   top: -1.5em;
   right: 0;
   z-index: 3;
+  display: inline-block;
 }
 
 .campaign-images .image1 IMG {
@@ -742,13 +752,126 @@ A.logo DIV {
 #home-stories {
   background: #003366;
   color: #FFFFFF;
-  height: 635px; /* TEMPORARY */
-  text-align: center; /* TEMPORARY */
+  font-weight: 800;
+  position: relative;
+}
+
+.home-stories-image {
+  position: absolute;
+  top: 0
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background: url(../images/home-stories.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.home-stories-text {
+  float: right;
+  width: 43%;
+  padding: 4.5em 0 5.5em;
+}
+
+.home-stories-text H5 {
+  margin: 0 0 4em;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.home-stories-text H2 {
+  font-weight: 300;
+  font-size: 49px;
+  line-height: 1.2em;
+}
+
+.home-stories-text .attr {
+  margin: 3em 0 6em;
+  color: #BBD66C;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.6em;
+}
+
+.home-stories-text .attr STRONG {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.home-stories-text A:link,
+.home-stories-text A:visited {
+  margin-right: 2em;
+  display: inline-block;
+  font-weight: 800;
+  line-height: 1em;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  border: 4px solid #00CCCC;
+  border-radius: 1.5em;
+  padding: 0.6em 1em 0.6em 1.1em;
+}
+
+.home-stories-text A:hover,
+.home-stories-text A:active {
+  color: #EDA50B;
+  border-color: #EDA50B;
 }
 
 #timeline {
   padding: 4em 0;
   margin-bottom: 70px;
+  text-align: center;
+}
+
+#timeline H2 {
+  margin: 0 0 1.5em;
+  color: #003366;
+  font-weight: 700;
+  font-family: 'Noto Serif', serif;
+  font-size: 30px;
+  line-height: 1em;
+}
+
+#timeline INPUT {
+  display: none;
+}
+
+#timeline LABEL {
+  display: inline-block;
+  margin: 0 2%;
+  padding: 0.5em 0.4em;
+  color: #003366;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1em;
+  cursor: pointer;
+  position: relative;
+  top: 3px;
+  border-bottom: 6px solid transparent;
+}
+
+#timeline LABEL:first-of-type {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+#timeline LABEL:last-of-type {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+#timeline INPUT:checked + LABEL {
+  color: #EDA50B;
+  border-bottom: 6px solid #EDA50B;
+}
+
+#timeline > DIV {
+  display: none;
+  border-top: 1px solid #CCCCCC;
+  color: #363636;
+  font-size: 15px;
+  line-height: 2em;
+  text-align: left;
+  padding: 5em 0;
 }
 
 .usm-footer {
@@ -828,6 +951,9 @@ A.logo DIV {
   .site-width {
     width: 96%;
   }
+
+  .home-slider .slick-prev { left: -15px; }
+  .home-slider .slick-next { right: -15px; }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -839,10 +965,195 @@ A.logo DIV {
     max-height: 16%;
     width: auto;
   }
+
+  .video-text {
+    width: 90%;
+  }
+
+  .campaign-images .image2 {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .home-slider-text H2 {
+    font-size: 5.8vw;
+  }
 }
 
 @media only screen and (max-width: 800px) {
   /* Small computer or landscape tablet */
+  .menu {
+    display: none;
+  }
+
+  A.my-menu-toggle {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    color: #FFFFFF;
+    font-size: 40px;
+    text-decoration: none;
+  }
+
+  A.my-menu-toggle:after {
+    font-family: FontAwesome;
+    content: "\f0c9";
+  }
+
+  .mm-menu {
+    background: rgba(7,29,68,0.98);
+    border-color: rgba(7,29,68,0.98);
+  }
+
+  .mm-menu .mm-listview {
+    border-color: rgba(7,29,68,0.98);
+  }
+
+  .mm-menu .mm-navbar A,
+  .mm-listview > li > a,
+  .mm-listview > li > span {
+    font-weight: 700;
+  }
+
+  .video-banner {
+    padding-top: 62%;
+  }
+
+  .video-text {
+    transform: translate(-50%,-50%);
+    width: 96%;
+    font-size: 50px;
+    line-height: 1.3em;
+  }
+
+  .home-progress .one-third {
+    width: 33%;
+    margin: 0 3%;
+  }
+
+  .home-progress .one-third A:link,
+  .home-progress .one-third A:visited {
+    font-size: 10px;
+    padding: 0.6em 0.6em 0.5em 0.7em;
+  }
+
+  .campaign-text {
+    float: none;
+    width: 100%;
+  }
+
+  .campaign-images {
+    float: none;
+    width: 100%;
+    height: 450px;
+    margin-top: 3em;
+  }
+
+  .campaign-images .image1 {
+    top: 0;
+    left: 0;
+    right: auto;
+  }
+
+  .campaign-images .image2 {
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-40%);
+    width: 45%;
+  }
+
+  .campaign-images .image3 {
+    top: 0;
+    bottom: auto;
+  }
+
+  .home-slider > .slick-list {
+    padding: 3em 0 !important;
+  }
+  
+  .home-slider > .slick-list .slick-slide {
+    padding: 0 4em;
+  }
+
+  .home-slider .slick-prev { left: 0; }
+  .home-slider .slick-next { right: 0; }
+
+  .home-slider-menu {
+    width: 100%;
+  }
+
+  .home-slider-text {
+    float: none;
+    width: 100%;
+  }
+
+  .home-slider-text A.more:link,
+  .home-slider-text A.more:visited {
+    margin-top: 0;
+  }
+
+  .home-slider-inner {
+    float: none;
+    width: 100%;
+    margin-top: 4em;
+  }
+
+  .home-slider-inner > .slick-list .slick-slide {
+    padding: 0;
+  }
+  
+  #home-stories {
+    padding-bottom: 500px;
+  }
+
+  .home-stories-image {
+    top: auto;
+    bottom: 0;
+    height: 500px;
+    width: 100%;
+  }
+
+  .home-stories-text {
+    float: none;
+    width: 96%;
+    margin: 0 auto;
+    padding: 3em 0 4em;
+  }
+
+  .home-stories-text H5 {
+    margin-bottom: 2em;
+  }
+
+  .home-stories-text .attr {
+    margin: 3em 0;
+  }
+
+  #timeline LABEL {
+    margin: 0 1.5%;
+  }
+
+  .usm-footer UL {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  .usm-footer UL LI,
+  .usm-footer UL LI:first-of-type {
+    padding: 0 1.5em;
+  }
+
+  .usm-footer .social {
+    position: static;
+    transform: none;
+    margin-top: 1.5em;
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -851,8 +1162,183 @@ A.logo DIV {
 
 @media only screen and (max-width: 600px) {
   /* Small tablet */
+  .video-banner {
+    padding-top: 62%;
+  }
+
+  .video-text {
+    transform: translate(-50%,-35%);
+    font-size: 45px;
+    line-height: 1.3em;
+  }
+
+  .video-banner {
+    padding-top: 62%;
+  }
+
+  #total-raised {
+    font-size: 16vw;
+  }
+
+  .home-progress .site-width {
+    display: block;
+  }
+
+  .home-progress .one-third {
+    width: 100%;
+    padding-bottom: 0;
+    margin: 3em 0;
+  }
+
+  .home-progress .one-third .circle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 45%;
+    margin-right: 4%;
+  }
+
+  .home-progress .one-third .one-third-text {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+  }
+
+  #capital-raised,
+  #endowment-raised,
+  #usm-raised {
+    margin-top: 0;
+  }
+
+  .home-progress .one-third A:link,
+  .home-progress .one-third A:visited {
+    position: static;
+    transform: none;
+    font-size: 12px;
+    padding: 0.6em 0.9em 0.5em 1em;
+    display: inline-block;
+    margin-top: 1.5em;
+  }
+
+  .campaign-images {
+    height: 350px;
+  }
+
+  .campaign-images .image1,
+  .campaign-images .image2,
+  .campaign-images .image3 {
+    width: 42%;
+  }
+
+  .home-slider-menu LI:nth-of-type(1),
+  .home-slider-menu LI:nth-of-type(3) {
+    text-align: center;
+  }
+
+  #timeline LABEL {
+    margin: 0 1%;
+    font-size: 19px;
+  }
+
+  .usm-footer UL LI,
+  .usm-footer UL LI:first-of-type {
+    padding: 0.5em 2em;
+  }
 }
 
 @media only screen and (max-width: 480px) {
   /* Phone */
+  .play {
+    height: 70px;
+    width: 70px;
+  }
+
+  .play:after {
+    border-width: 15px 0 15px 15px;
+  }
+
+  A.logo {
+    font-size: 30px;
+  }
+
+  A.logo DIV {
+    font-size: 37%;
+  }
+
+  .video-banner {
+    padding-top: 100%;
+  }
+
+  .video-text {
+    font-size: 35px;
+  }
+
+  .home-progress .one-third .circle {
+    width: 96%;
+    margin-right: 0;
+  }
+
+  .home-progress .one-third .one-third-text {
+    width: 96%;
+  }
+
+  #capital-raised,
+  #endowment-raised,
+  #usm-raised {
+    margin-top: 1.5em;
+  }
+
+  .home-progress .one-third .circle .circle-text {
+    font-size: 30px;
+  }
+
+  #capital-percent,
+  #endowment-percent,
+  #usm-percent {
+    font-size: 70px;
+  }
+
+  #home-campaign H2 {
+    font-size: 55px;
+  }
+
+  .campaign-images {
+    height: 250px;
+  }
+  
+  .home-slider-menu {
+    top: -5em;
+  }
+
+  .home-slider-menu LI {
+    width: 100%;
+    padding: 0.4em 0;
+  }
+
+  .home-slider-inner .slick-dots {
+    bottom: 15px;
+  }
+
+  #timeline LABEL,
+  #timeline LABEL:first-of-type,
+  #timeline LABEL:last-of-type {
+    margin: 0 1%;
+    padding: 0.5em 0.4em;
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  /* Small Phone */
+  A.logo {
+    font-size: 25px;
+  }
+
+  .home-stories-text A:link,
+  .home-stories-text A:visited {
+    margin: 0 4em 2em 0;
+  }
+
+  #timeline LABEL {
+    font-size: 21px;
+  }
 }
