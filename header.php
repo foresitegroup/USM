@@ -15,10 +15,12 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700|Open+Sans:300,400,600,700,800">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="inc/jquery.mmenu.css" type="text/css">
+    <link rel="stylesheet" href="inc/swipebox/swipebox.css">
     <link rel="stylesheet" href="inc/main.css?<?php echo filemtime('inc/main.css'); ?>">
     
     <script type="text/javascript" src="inc/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="inc/jquery.mmenu.min.js"></script>
+    <script type="text/javascript" src="inc/swipebox/jquery.swipebox.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
         $("a[href^='http'], a[href$='.pdf']").not("[href*='" + window.location.host + "']").attr('target','_blank');
@@ -28,10 +30,12 @@
           "navbar": { "title": '<a href="#my-page">&times</a>' },
           "extensions": [ "pagedim-black" ]
         });
+
+        $(".swipebox-video").swipebox({autoplayVideos: true});
       });
     </script>
   </head>
-  <body<?php if (isset($BodyStyle)) echo " class=\"" . $BodyStyle . "\""; ?>>
+  <body<?php if (isset($BodyStyle)) echo " id=\"" . $BodyStyle . "\""; ?>>
     <div id="my-page"> <!-- For mobile menu -->
       
       <div class="sticky-spacer"></div>

@@ -197,14 +197,6 @@ function nice_number($num) {
   var usmRaised = new CountUp("usm-raised", 0, <?php echo $USMRaised; ?>, 0, 2, opt1);
 </script>
 
-<link rel="stylesheet" href="inc/swipebox/swipebox.css">
-<script type="text/javascript" src="inc/swipebox/jquery.swipebox.min.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() {
-    $(".swipebox-video").swipebox({autoplayVideos: true});
-  });
-</script>
-
 <div id="home-campaign">
   <div class="site-width">
     <div class="campaign-text">
@@ -322,40 +314,33 @@ function nice_number($num) {
 
   <?php
   $result = $mysqli->query("SELECT * FROM timeline ORDER BY year ASC");
-  ?>
-  <style>
-    <?php
-    while($row = $result->fetch_array(MYSQLI_ASSOC)) {
-      echo "#tab" . $row['year'] . ":checked ~ #content" . $row['year'] . " { display: block; }\n";
-    }
-    ?>
-  </style>
   
-  <?php
-  $result->data_seek(0);
-
+  $TLstyle = "<style>\n";
+  $TLtabs = "";
+  $TLcontent = "";
   $check = 1;
-  while($row = $result->fetch_array(MYSQLI_ASSOC)) {
-    echo "<input id=\"tab" . $row['year'] . "\" type=\"radio\" name=\"tabs\"";
-    if ($check == 1 || $row['year'] == date("Y")) echo " checked";
-    echo ">\n";
 
-    echo "<label for=\"tab" . $row['year'] . "\">" . $row['year'] . "</label>\n";
+  while($row = $result->fetch_array(MYSQLI_ASSOC)) {
+    $TLstyle .= "#tab" . $row['year'] . ":checked ~ #content" . $row['year'] . " { display: block; }\n";
+
+    $TLtabs .= "<input id=\"tab" . $row['year'] . "\" type=\"radio\" name=\"tabs\"";
+    if ($check == 1 || $row['year'] == date("Y")) $TLtabs .= " checked";
+    $TLtabs .= ">\n";
+
+    $TLtabs .= "<label for=\"tab" . $row['year'] . "\">" . $row['year'] . "</label>\n";
 
     $check++;
+
+    $TLcontent .= "<div id=\"content" . $row['year'] . "\"><div class=\"site-width-small\">";
+    $TLcontent .= $row['content'];
+    $TLcontent .= "</div></div>\n";
   }
 
-  $result->data_seek(0);
+  $TLstyle .= "</style>\n";
 
-  while($row = $result->fetch_array(MYSQLI_ASSOC)) {
-    ?>
-    <div id="content<?php echo $row['year']; ?>">
-      <div class="site-width-small">
-        <?php echo $row['content']; ?>
-      </div>
-    </div>
-    <?php
-  }
+  echo $TLstyle;
+  echo $TLtabs;
+  echo $TLcontent;
   ?>
 </div>
 
