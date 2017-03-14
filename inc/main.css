@@ -33,7 +33,7 @@ HR {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #363636;
+  border-top: 1px solid #CCCCCC;
   margin: 1em 0;
   padding: 0;
 }
@@ -88,6 +88,30 @@ H3 {
   clear: both;
 }
 
+.overlay:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.play-text {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  color: #FFFFFF;
+  text-align: center;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1em;
+  letter-spacing: 0.3em;
+}
+
 .play {
   position: absolute;
   top: 50%;
@@ -102,6 +126,14 @@ H3 {
   border-radius: 50%;
 }
 
+.play-text .play {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+  margin-bottom: 30px;
+}
+
 .play:after {
   content: "";
   display: block;
@@ -114,6 +146,7 @@ H3 {
   transform: translate(-30%,-50%);
 }
 
+A:hover .play-text { color: #EDA50B; }
 A:hover .play { border-color: #EDA50B; }
 A:hover .play:after { border-color: transparent transparent transparent #EDA50B; }
 
@@ -159,7 +192,7 @@ A:hover .play:after { border-color: transparent transparent transparent #EDA50B;
   height: 93px;
 }
 
-.home .sticky-spacer {
+#home .sticky-spacer {
   height: 0;
 }
 
@@ -172,13 +205,13 @@ A:hover .play:after { border-color: transparent transparent transparent #EDA50B;
   z-index: 10;
 }
 
-.home .sticky-header {
+#home .sticky-header {
   background: transparent;
   position: absolute;
   top: 2em;
 }
 
-.home .sticky-header.sticky {
+#home .sticky-header.sticky {
   background: #071D44;
   position: fixed;
   top: 0;
@@ -1079,70 +1112,24 @@ A.my-menu-toggle {
   font-size: 36px;
 }
 
-.commons {
-  /*display: flex;*/
-  margin-bottom: 3em;
-  outline: 1px solid blue;
-}
-
-
-
-.commons-images {
-  float: left;
-  width: 46.66%;
+.goals-two-col,
+.goals-cols {
+  margin: 7em 0 5em;
   position: relative;
-  outline: 1px solid red;
 }
 
-.commons-images:after {
-  content: "";
-  display: block;
-  padding-top: 100%;
-}
-
-.commons-images IMG {
-  max-width: 100%;
-  height: auto;
-  -webkit-box-shadow: 0 0 45px 3px rgba(0,0,0,0.25);
-  -moz-box-shadow: 0 0 45px 3px rgba(0,0,0,0.25);
-  box-shadow: 0 0 45px 3px rgba(0,0,0,0.25);
-}
-
-.commons-images .image1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  display: inline-block;
-  width: 89%;
-}
-
-.commons-images .image2 {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  z-index: 2;
-  display: inline-block;
-  width: 54%;
-}
-
-.commons-images .image3 {
-  position: absolute;
-  bottom: 0;
-  left: 10%;
-  z-index: 1;
-  display: inline-block;
-  width: 55%;
-}
-
-.commons-text {
+.goals-two-col-text {
   float: right;
-  width: 46.66%;
-  line-height: 1.8em;
+  width: 48.5%;
+  line-height: 2em;
 }
 
-.commons-text A.button:link,
-.commons-text A.button:visited {
+.text-first .goals-two-col-text {
+  float: left;
+}
+
+.goals-two-col A.button:link,
+.goals-two-col A.button:visited {
   display: inline-block;
   color: #EDA50B;
   font-weight: 800;
@@ -1155,11 +1142,157 @@ A.my-menu-toggle {
   margin-top: 3em;
 }
 
-#capital-page .commons-text A.button:hover,
-#capital-page .commons-text A.button:active {
+.goals-two-col.text-first A.button:link,
+.goals-two-col.text-first A.button:visited {
+  display: table;
+  margin: 3em auto 0;
+}
+
+#capital-page .goals-two-col A.button:hover,
+#capital-page .goals-two-col A.button:active {
   color: #BBD66C;
   border-color: #BBD66C;
 }
+
+.goals-two-col-images {
+  float: left;
+  width: 45.5%;
+  height: 590px;
+  position: relative;
+}
+
+.text-first .goals-two-col-images {
+  float: right;
+}
+
+.goals-two-col-images IMG {
+  max-width: 100%;
+  height: auto;
+  -webkit-box-shadow: 0 0 45px 3px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0 0 45px 3px rgba(0,0,0,0.25);
+  box-shadow: 0 0 45px 3px rgba(0,0,0,0.25);
+  display: block;
+}
+
+.goals-two-col-images .image1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 89%;
+}
+
+.goals-two-col-images .image2 {
+  position: absolute;
+  top: 52%;
+  right: 2%;
+  z-index: 2;
+  width: 54%;
+}
+
+.goals-two-col-images .image3 {
+  position: absolute;
+  top: 69%;
+  left: 5%;
+  z-index: 1;
+  width: 55%;
+}
+
+.text-first .goals-two-col-images .image1 {
+  left: auto;
+  right: 0;
+  width: 96%;
+}
+
+.text-first .goals-two-col-images .image2 {
+  top: 57.5%;
+  left: 0;
+  width: 57%;
+}
+
+.text-first .goals-two-col-images .image3 {
+  top: 82.5%;
+  left: auto;
+  right: 5%;
+  width: 57%;
+}
+
+.goals-cols .one-third {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 6.4%;
+  width: 28.8%;
+  padding-left: 20px;
+  box-sizing: border-box;
+  background: url(../images/bullet.png) no-repeat top left;
+  background-size: 11px auto;
+  font-size: 15px;
+  line-height: 1.8em;
+}
+
+.goals-cols .one-third:nth-of-type(3) {
+  margin-right: 0;
+}
+
+.goals-cols .one-fourth {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 3.6%;
+  width: 22%;
+  padding-left: 20px;
+  box-sizing: border-box;
+  background: url(../images/bullet.png) no-repeat top left;
+  background-size: 11px auto;
+  font-size: 15px;
+  line-height: 1.8em;
+}
+
+.goals-cols .one-fourth:nth-of-type(4) {
+  margin-right: 0;
+}
+
+.goals-slider {
+  margin: 5em 0 6em;
+}
+
+.goals-slider .slick-prev,
+.goals-slider .slick-next {
+  position: absolute;
+  top: 50%;
+  left: 1em;
+  transform: translateY(-50%);
+  height: 35px;
+  width: 35px;
+  box-sizing: border-box;
+  border: 2px solid #B4BFC7;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+.goals-slider .slick-next {
+  left: auto;
+  right: 1em;
+}
+
+.goals-slider .slick-prev:after,
+.goals-slider .slick-next:after {
+  font-family: "FontAwesome";
+  content: "\f104";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%,-60%);
+  font-size: 24px;
+  line-height: 0.7em;
+  color: #CCD0DA;
+}
+
+.goals-slider .slick-next:after {
+  content: "\f105";
+  transform: translate(-40%,-60%);
+}
+
+
 
 @media only screen and (max-width: 1200px) {
   .site-width {

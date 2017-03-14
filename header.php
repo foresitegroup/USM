@@ -31,7 +31,7 @@
           "extensions": [ "pagedim-black" ]
         });
 
-        $(".swipebox-video").swipebox({autoplayVideos: true});
+        $(".swipebox-video").swipebox({ autoplayVideos: true, videoMaxWidth: 1200 });
       });
     </script>
   </head>

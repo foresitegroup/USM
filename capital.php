@@ -81,8 +81,8 @@ include "header.php";
 </div>
 
 <div class="site-width">
-  <div class="commons cf">
-    <div class="commons-text">
+  <div class="goals-two-col cf">
+    <div class="goals-two-col-text">
       <h3>The Commons</h3>
 
       The feeling of community is everywhere &mdash; in our hallways, classrooms, and advising groups, on our athletic fields, in the smiles of our youngest students, and in the memories of our oldest alumni.  Ask our teachers, students, parents, and alumni about their USM experiences, and inevitably they mention "community," the defining attribute of our School.<br>
@@ -94,13 +94,154 @@ include "header.php";
       <a href="#" class="button">GIVING OPPORTUNITIES</a>
     </div>
 
-    <div class="commons-images">
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="image1 swipebox-video" rel="commons"><img src="images/commons1.jpg" alt=""><div class="play"></div></a>
+    <div class="goals-two-col-images">
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="image1 swipebox-video overlay" rel="commons"><img src="images/commons1.jpg" alt=""><div class="play-text"><div class="play"></div><br>PLAY FLY-THROUGH</div></a>
       <img src="images/commons2.jpg" alt="" class="image2">
       <img src="images/commons3.jpg" alt="" class="image3">
     </div>
   </div>
 
+  <div class="goals-cols">
+    <div class="one-fourth">
+      A new Commons will enhance USM's ability to promote our core belief in the power of community and of lasting relationships &mdash; and allow us to strengthen our traditional cultural touchstones.
+    </div>
+
+    <div class="one-fourth">
+      A new Commons will preserve and enrich our tradition of students dining with faculty. It will offer an atmosphere and space more conducive to fostering conversations, connections, and mentoring relationships.
+    </div>
+
+    <div class="one-fourth">
+      The Commons will offer flexible-use areas for presentations, intimate gatherings, studying, and collaborative learning. It will also provide room for House meetings; in essence, a space to be used throughout the day.
+    </div>
+
+    <div class="one-fourth">
+      A new lobby for the Upper School, with an elevator and separate entrance, will allow us to host off-hours events in the Commons for alumni, parents, and the community.
+    </div>
+
+    <br><br>
+
+    <link rel="stylesheet" href="inc/slick/slick.css">
+    <script type="text/javascript" src="inc/slick/slick.min.js"></script>
+    <script type="text/javascript" src="inc/slick/slick.init.goals-slider.js"></script>
+
+    <div class="goals-slider">
+      <img src="images/commons-slide1.jpg" alt="">
+      <img src="images/commons-slide2.jpg" alt="">
+      <img src="images/commons-slide3.jpg" alt="">
+      <img src="images/commons-slide4.jpg" alt="">
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="site-width">
+  <div class="goals-two-col cf text-first">
+    <div class="goals-two-col-text">
+      <h3>Performing Arts Center</h3>
+
+      The performing arts are an essential part of the student experience at USM, from the first note heard in a preschool music class to the final bow taken on stage in the Virginia Henes Young Theatre.<br>
+      <br>
+
+      Our collaborative arts programs&mdash;including the visual arts, drama, music, and dance&mdash;provide amazing opportunities for students to discover a passion and to hone an artistic skill. These arts experiences lead to success in other areas of life as students learn self-discipline, collaboration, problem solving, and public speaking.<br>
+      <br>
+
+      Whether it is by picking up a paintbrush, a camera, a musical instrument or a script, our students are pushing themselves to new levels of achievement through the arts. The quality of USM's superb arts programs must be matched by the quality of our facilities.<br>
+      <br>
+
+      Our theatre was built in 1985 when USM consolidated its two campuses, and is now in need of enhancement. <br>
+      <br>
+
+      <a href="#" class="button">GIVING OPPORTUNITIES</a>
+    </div>
+
+    <div class="goals-two-col-images">
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="image1 swipebox-video overlay" rel="pac"><img src="images/pac1.jpg" alt=""><div class="play-text"><div class="play"></div><br>PLAY FLY-THROUGH</div></a>
+      <img src="images/pac2.jpg" alt="" class="image2">
+      <img src="images/pac3.jpg" alt="" class="image3">
+    </div>
+  </div>
+
+  <div class="goals-cols">
+    <div class="one-third">
+      Theatre additions will include new and larger dressing rooms, ample storage, new restrooms, and rehearsal spaces for our band and orchestra.
+    </div>
+
+    <div class="one-third">
+      Additional seating will provide needed space for our large audiences and allow all students and faculty in an individual division to sit together for assemblies, including presentations by guest speakers and Senior Speeches.
+    </div>
+
+    <div class="one-third">
+      We will transform the theatre lobby into a dynamic hub, showcasing the arts at USM. It will include a large art gallery as well as collaboration zones: flexible spaces for small group rehearsals, impromptu performances, and revolving art installations.
+    </div>
+
+    <br><br>
+
+    <div class="goals-slider">
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="image1 swipebox-video" rel="pac-slide1"><img src="images/pac-slide1.jpg" alt=""><div class="play-text"><div class="play"></div><br>PLAY VIDEO</div></a>
+      <img src="images/pac-slide2.jpg" alt="">
+      <img src="images/pac-slide3.jpg" alt="">
+      <img src="images/pac-slide4.jpg" alt="">
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="site-width">
+  <div class="goals-two-col cf">
+    <div class="goals-two-col-text">
+      <h3>Innovation Center</h3>
+
+      Terrific ideas often start with a spark, and not always a textbook. Real-world innovation requires the kind of intellectual horsepower that comes from roll-up-your-sleeves curiosity.<br>
+      <br>
+
+      The world and the workplace are looking for the solvers and the doers--the bold thinkers who seize a "eureka" moment by taking vision to prototype and making it into something great. Colleges are looking for these kinds of students as well.<br>
+      <br>
+
+      At USM, we are committed to fostering a culture of discovery and inquiry. Our students are equipped and inspired to solve real-world problems and to build skills that are both meaningful and marketable. We believe that our innovative programs and talented faculty provide our students with the entrepreneurial edge they will need in their future careers.<br>
+      <br>
+
+      Our new Innovation Center will serve as a central hub of experiential, technology-based experimentation and learning. Demand and interest are high. The current innovation spaces&mdash;House of Technology, Nerdvana, and Wildcat Creation Station&mdash;are utilized at full capacity by students in all three divisions. <br>
+      <br>
+
+      <a href="#" class="button">GIVING OPPORTUNITIES</a>
+    </div>
+
+    <div class="goals-two-col-images">
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="image1 swipebox-video overlay" rel="innovation"><img src="images/innovation1.jpg" alt=""><div class="play-text"><div class="play"></div><br>PLAY FLY-THROUGH</div></a>
+      <img src="images/innovation2.jpg" alt="" class="image2">
+      <img src="images/innovation3.jpg" alt="" class="image3">
+    </div>
+  </div>
+
+  <div class="goals-cols">
+    <div class="one-third">
+      Large, flexible space and highly adaptable work stations will facilitate collaboration, team projects, and free-form experimentation.
+    </div>
+
+    <div class="one-third">
+      Tools and technology will include laser cutters, 3D printers, and other equipment for interest- powered and production-centered learning.
+    </div>
+
+    <div class="one-third">
+      The Innovation Center will support USM's independent and collaborative study programs, such as Compass 9, that engage students in longer-term, inquiry-based projects and ultimately set them apart in their readiness for college and beyond.
+    </div>
+
+    <br><br>
+
+    <div class="goals-slider">
+      <img src="images/innovation-slide1.jpg" alt="">
+      <img src="images/innovation-slide2.jpg" alt="">
+      <img src="images/innovation-slide3.jpg" alt="">
+      <img src="images/innovation-slide4.jpg" alt="">
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="site-width">
   Bacon ipsum dolor sit amet sausage bacon biltong, salami drumstick hamburger ham hock. Filet mignon ribeye meatball flank tri-tip tongue boudin, doner pig tenderloin. Beef cow turducken pork belly. Corned beef andouille short loin spare ribs. Short ribs frankfurter pig beef ribs. Sausage salami kielbasa cow jowl. Pork ribeye sirloin sausage bacon ham swine turkey biltong tenderloin boudin beef ribs pig hamburger.<br>
   <br>
 
