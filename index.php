@@ -130,7 +130,7 @@ function nice_number($num) {
 <script type="text/javascript">
   $(document).ready(function() {
     $(".video-badge").waypoint(function(direction) {
-      $(".home .sticky-header").toggleClass("sticky", direction == "down");
+      $("#home .sticky-header").toggleClass("sticky", direction == "down");
     });
 
     $(".home-progress").waypoint(function() {
@@ -159,17 +159,17 @@ function nice_number($num) {
 
       $('#capital-circle').circleProgress({
         value: 0.<?php echo $CapitalPercent; ?>, fill: '#A1B434', size: $('.home-progress .one-third .circle').width(),
-        emptyFill: '#D7D7D7', startAngle: 0, thickness: 15, animation: { duration: 2000 }
+        emptyFill: '#D7D7D7', startAngle: -Math.PI/2, thickness: 15, animation: { duration: 2000 }
       });
 
       $('#endowment-circle').circleProgress({
         value: 0.<?php echo $EndowmentPercent; ?>, fill: '#EDA50B', size: $('.home-progress .one-third .circle').width(),
-        emptyFill: '#D7D7D7', startAngle: 0, thickness: 15, animation: { duration: 2000 }
+        emptyFill: '#D7D7D7', startAngle: -Math.PI/2, thickness: 15, animation: { duration: 2000 }
       });
 
       $('#usm-circle').circleProgress({
         value: 0.<?php echo $USMPercent; ?>, fill: '#003366', size: $('.home-progress .one-third .circle').width(),
-        emptyFill: '#D7D7D7', startAngle: 0, thickness: 15, animation: { duration: 2000 }
+        emptyFill: '#D7D7D7', startAngle: -Math.PI/2, thickness: 15, animation: { duration: 2000 }
       });
 
       capitalPercent.start();

@@ -1120,7 +1120,7 @@ A.my-menu-toggle {
 
 .goals-two-col-text {
   float: right;
-  width: 48.5%;
+  width: 49%;
   line-height: 2em;
 }
 
@@ -1184,7 +1184,7 @@ A.my-menu-toggle {
 
 .goals-two-col-images .image2 {
   position: absolute;
-  top: 52%;
+  top: 53%;
   right: 2%;
   z-index: 2;
   width: 54%;
@@ -1192,7 +1192,7 @@ A.my-menu-toggle {
 
 .goals-two-col-images .image3 {
   position: absolute;
-  top: 69%;
+  top: 79%;
   left: 5%;
   z-index: 1;
   width: 55%;

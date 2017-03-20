@@ -68,7 +68,7 @@ include "header.php";
       $(document).ready(function() {
         $('#capital-circle').circleProgress({
           value: 0.<?php echo $Percent; ?>, fill: '#A1B434', size: $('.goal-meter .circle').width(),
-          emptyFill: '#D7D7D7', startAngle: 0, thickness: 21, animation: { duration: 2000 }
+          emptyFill: '#D7D7D7', startAngle: -Math.PI/2, thickness: 21, animation: { duration: 2000 }
         });
       });
 
@@ -80,63 +80,10 @@ include "header.php";
   </div>
 </div>
 
+
+
 <div class="site-width">
   <div class="goals-two-col cf">
-    <div class="goals-two-col-text">
-      <h3>The Commons</h3>
-
-      The feeling of community is everywhere &mdash; in our hallways, classrooms, and advising groups, on our athletic fields, in the smiles of our youngest students, and in the memories of our oldest alumni.  Ask our teachers, students, parents, and alumni about their USM experiences, and inevitably they mention "community," the defining attribute of our School.<br>
-      <br>
-
-      And yet the School is without a true center for campus life, a gathering place much like those now found at our peer independent schools and on college campuses across the country.<br>
-      <br>
-
-      <a href="#" class="button">GIVING OPPORTUNITIES</a>
-    </div>
-
-    <div class="goals-two-col-images">
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="image1 swipebox-video overlay" rel="commons"><img src="images/commons1.jpg" alt=""><div class="play-text"><div class="play"></div><br>PLAY FLY-THROUGH</div></a>
-      <img src="images/commons2.jpg" alt="" class="image2">
-      <img src="images/commons3.jpg" alt="" class="image3">
-    </div>
-  </div>
-
-  <div class="goals-cols">
-    <div class="one-fourth">
-      A new Commons will enhance USM's ability to promote our core belief in the power of community and of lasting relationships &mdash; and allow us to strengthen our traditional cultural touchstones.
-    </div>
-
-    <div class="one-fourth">
-      A new Commons will preserve and enrich our tradition of students dining with faculty. It will offer an atmosphere and space more conducive to fostering conversations, connections, and mentoring relationships.
-    </div>
-
-    <div class="one-fourth">
-      The Commons will offer flexible-use areas for presentations, intimate gatherings, studying, and collaborative learning. It will also provide room for House meetings; in essence, a space to be used throughout the day.
-    </div>
-
-    <div class="one-fourth">
-      A new lobby for the Upper School, with an elevator and separate entrance, will allow us to host off-hours events in the Commons for alumni, parents, and the community.
-    </div>
-
-    <br><br>
-
-    <link rel="stylesheet" href="inc/slick/slick.css">
-    <script type="text/javascript" src="inc/slick/slick.min.js"></script>
-    <script type="text/javascript" src="inc/slick/slick.init.goals-slider.js"></script>
-
-    <div class="goals-slider">
-      <img src="images/commons-slide1.jpg" alt="">
-      <img src="images/commons-slide2.jpg" alt="">
-      <img src="images/commons-slide3.jpg" alt="">
-      <img src="images/commons-slide4.jpg" alt="">
-    </div>
-  </div>
-</div>
-
-<hr>
-
-<div class="site-width">
-  <div class="goals-two-col cf text-first">
     <div class="goals-two-col-text">
       <h3>Performing Arts Center</h3>
 
@@ -146,10 +93,10 @@ include "header.php";
       Our collaborative arts programs&mdash;including the visual arts, drama, music, and dance&mdash;provide amazing opportunities for students to discover a passion and to hone an artistic skill. These arts experiences lead to success in other areas of life as students learn self-discipline, collaboration, problem solving, and public speaking.<br>
       <br>
 
-      Whether it is by picking up a paintbrush, a camera, a musical instrument or a script, our students are pushing themselves to new levels of achievement through the arts. The quality of USM's superb arts programs must be matched by the quality of our facilities.<br>
+      Whether it is by picking up a paintbrush, a camera, a musical instrument or a script, our students are pushing themselves to new levels of achievement through the arts.<br>
       <br>
 
-      Our theatre was built in 1985 when USM consolidated its two campuses, and is now in need of enhancement. <br>
+      The quality of USM's superb arts programs must be matched by the quality of our facilities. Our theatre was built in 1985 when USM consolidated its two campuses, and is now in need of enhancement.<br>
       <br>
 
       <a href="#" class="button">GIVING OPPORTUNITIES</a>
@@ -164,11 +111,11 @@ include "header.php";
 
   <div class="goals-cols">
     <div class="one-third">
-      Theatre additions will include new and larger dressing rooms, ample storage, new restrooms, and rehearsal spaces for our band and orchestra.
+      Theatre additions will include new and larger dressing rooms, ample storage, new restrooms, and rehearsal spaces for our band and orchestra students (with one of these to also be used as a remote and virtual orchestra pit).
     </div>
 
     <div class="one-third">
-      Additional seating will provide needed space for our large audiences and allow all students and faculty in an individual division to sit together for assemblies, including presentations by guest speakers and Senior Speeches.
+      An additional 80 seats will provide needed space for our large audiences and allow all students and faculty in an individual division to sit together for assemblies, including presentations by guest speakers and Senior Speeches.
     </div>
 
     <div class="one-third">
@@ -189,6 +136,69 @@ include "header.php";
 <hr>
 
 <div class="site-width">
+  <div class="goals-two-col cf text-first">
+    <div class="goals-two-col-text">
+      <h3>Jack Olson &lsquo;67 Commons</h3>
+
+      The feeling of community is everywhere &mdash; in our hallways, classrooms, and advising groups, on our athletic fields, in the smiles of our youngest students, and in the memories of our oldest alumni.<br>
+      <br>
+
+      Ask our teachers, students, parents, and alumni about their USM experiences, and inevitably they mention "community," the defining attribute of our School.<br>
+      <br>
+
+      The School is currently without a true center for campus life&mdash;a gathering place much like those now found at our peer independent schools and on college campuses across the country.<br>
+      <br>
+
+      The new Olson Commons will enhance USM's ability to promote our core belief in the power of community and of lasting relationships&mdash;and allow us to strengthen our traditional cultural touchstones.<br>
+      <br>
+
+      <a href="#" class="button">GIVING OPPORTUNITIES</a>
+    </div>
+
+    <div class="goals-two-col-images">
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="image1 swipebox-video overlay" rel="commons"><img src="images/commons1.jpg" alt=""><div class="play-text"><div class="play"></div><br>PLAY FLY-THROUGH</div></a>
+      <img src="images/commons2.jpg" alt="" class="image2">
+      <img src="images/commons3.jpg" alt="" class="image3">
+    </div>
+  </div>
+
+  <div class="goals-cols">
+    <div class="one-fourth">
+      The Olson Commons will preserve and enrich our tradition of students dining with faculty. It will offer an atmosphere and space more conducive to fostering conversations, connections, and mentoring relationships.
+    </div>
+
+    <div class="one-fourth">
+      We will be able to host important community-building events like the Senior Dinner, athletic banquets, parent gatherings, and alumni get-togethers onsite.
+    </div>
+
+    <div class="one-fourth">
+      The Olson Commons will offer flexible-use areas for presentations, intimate gatherings, studying, and collaborative learning. It will also provide room for House meetings, in essence, a space to be used throughout the day.
+    </div>
+
+    <div class="one-fourth">
+      A new lobby for the Upper School, with an elevator and separate entrance, will allow us to host off-hours events in the Olson Commons for alumni, parents, and the community.
+    </div>
+
+    <br><br>
+
+    <link rel="stylesheet" href="inc/slick/slick.css">
+    <script type="text/javascript" src="inc/slick/slick.min.js"></script>
+    <script type="text/javascript" src="inc/slick/slick.init.goals-slider.js"></script>
+
+    <div class="goals-slider">
+      <img src="images/commons-slide1.jpg" alt="">
+      <img src="images/commons-slide2.jpg" alt="">
+      <img src="images/commons-slide3.jpg" alt="">
+      <img src="images/commons-slide4.jpg" alt="">
+    </div>
+  </div>
+</div>
+
+<hr>
+
+
+
+<div class="site-width">
   <div class="goals-two-col cf">
     <div class="goals-two-col-text">
       <h3>Innovation Center</h3>
@@ -196,13 +206,13 @@ include "header.php";
       Terrific ideas often start with a spark, and not always a textbook. Real-world innovation requires the kind of intellectual horsepower that comes from roll-up-your-sleeves curiosity.<br>
       <br>
 
-      The world and the workplace are looking for the solvers and the doers--the bold thinkers who seize a "eureka" moment by taking vision to prototype and making it into something great. Colleges are looking for these kinds of students as well.<br>
+      The world and the workplace are looking for the solvers and the doers&mdash;the bold thinkers who seize a "eureka" moment by taking vision to prototype and making it into something great. Colleges are looking for these kinds of students as well.<br>
       <br>
 
-      At USM, we are committed to fostering a culture of discovery and inquiry. Our students are equipped and inspired to solve real-world problems and to build skills that are both meaningful and marketable. We believe that our innovative programs and talented faculty provide our students with the entrepreneurial edge they will need in their future careers.<br>
+      We are committed to fostering a culture of discovery and inquiry. Our students are equipped and inspired to solve real-world problems and to build skills that are both meaningful and marketable. We believe that our innovative programs and talented faculty provide our students with the entrepreneurial edge they will need in their future careers.<br>
       <br>
 
-      Our new Innovation Center will serve as a central hub of experiential, technology-based experimentation and learning. Demand and interest are high. The current innovation spaces&mdash;House of Technology, Nerdvana, and Wildcat Creation Station&mdash;are utilized at full capacity by students in all three divisions. <br>
+      Our new Innovation Center will serve as a central hub of experiential, technology-based experimentation and learning. Demand and interest are high. The current innovation spaces&mdash;House of Technology, Nerdvana, and Wildcat Creation Station&mdash;are utilized at full capacity by students in all three divisions.<br>
       <br>
 
       <a href="#" class="button">GIVING OPPORTUNITIES</a>
@@ -235,6 +245,56 @@ include "header.php";
       <img src="images/innovation-slide2.jpg" alt="">
       <img src="images/innovation-slide3.jpg" alt="">
       <img src="images/innovation-slide4.jpg" alt="">
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="site-width">
+  <div class="goals-two-col cf text-first">
+    <div class="goals-two-col-text">
+      <h3>Lee Community Room and Darrow Family Welcome Center</h3>
+
+      Great things happen when great minds come together. This is evident every day among our School community members who dedicate themselves in so many ways to supporting the educational development of our students and contributing to the vitality of USM.<br>
+      <br>
+
+      The Lee Community Room is a place for all of us, where parents and others can mingle, connect with teachers, exchange ideas, work on projects, and conduct volunteer meetings. Here we will be able to share more than a passing hello at drop-off. The Darrow Family Welcome Center serves as a safe, efficient, and welcoming entryway for parents and visitors to the School. These are important spaces that help foster USM's growth as a community.<br>
+      <br>
+
+      Never underestimate the power of an impromptu parent-teacher conversation over a cup of coffee.<br>
+      <br>
+
+      <a href="#" class="button">GIVING OPPORTUNITIES</a>
+    </div>
+
+    <div class="goals-two-col-images">
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="image1 swipebox-video overlay" rel="pac"><img src="images/community1.jpg" alt=""><div class="play-text"><div class="play"></div><br>PLAY FLY-THROUGH</div></a>
+      <img src="images/community2.jpg" alt="" class="image2">
+      <img src="images/community3.jpg" alt="" class="image3">
+    </div>
+  </div>
+
+  <div class="goals-cols">
+    <div class="one-third">
+      Located at the entrance of the Lower School, the Lee Community Room and Darrow Family Welcome Center provide a gateway to our School and serve as a symbolic beginning to our capital campaign.
+    </div>
+
+    <div class="one-third">
+      The Lee Community Room features collaborative working spaces, coffee-and-conversation areas, and flexible seating for larger gatherings, including admissions events, faculty meetings, and Parents' Association meetings.
+    </div>
+
+    <div class="one-third">
+      Faculty and other School community groups have full access to this space for their activities, which helps to strengthen our commitment to building connections and camaraderie across all divisions at USM.
+    </div>
+
+    <br><br>
+
+    <div class="goals-slider">
+      <img src="images/community-slide1.jpg" alt="">
+      <img src="images/community-slide2.jpg" alt="">
+      <img src="images/community-slide3.jpg" alt="">
+      <img src="images/community-slide4.jpg" alt="">
     </div>
   </div>
 </div>
